@@ -1,10 +1,13 @@
 require "twitter"
 
+require_relative "../update_token"
+
 class Tweet
   def initialize
     @CMD = 0
     @CONTENT = 1
     @OPTION = 2
+    @update = UpdateToken.new
   end
 
   def command(client, order)
@@ -20,6 +23,15 @@ class Tweet
         count_time_line(client, order)
       else
         user_time_line(client, order)
+      end
+    when "keyedit"
+      # 本当に実行していいのか確認
+      print "Do you really want to change the key? (y/N)"
+      answer = gets.chomp
+
+      if answer == "y" || answer == "Y"
+        # keyを変更する
+        @update.insert
       end
     when nil
       # 何も入力されなかった場合

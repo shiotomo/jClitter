@@ -4,6 +4,15 @@ CLI用Twitterクライアント
 ## 使用言語
 - Ruby 2.4.1
 
+## 名前の由来
+宝石(Ruby)を使ったCLI用Twitterクライアントという意味で命名しました。  
+
+- j : jewelry, json  
+- Cli : CLI, client  
+- tter : twitter  
+
+
+
 ## 使用方法
 git cloneをした後に以下のコマンドを実行してください。
 ```

@@ -44,7 +44,7 @@ consumer_key =>
 ツイートする際に使うコマンドです。  
 第一引数の内容がツイートされます。  
 
-- timeline or tl  
+- timeline, tl  
 TLを表示するコマンドです。  
 引数は必要としません。  
 

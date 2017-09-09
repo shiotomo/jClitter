@@ -3,9 +3,9 @@ require_relative 'update_token'
 
 # mainメソッド
 def main
-  if File.exist?("/json/token.json")
-    puts "please subscribe twitter api"
+  if !File.exist?("json/token.json")
     # トークンをjson形式で登録
+    puts "please register the key"
     UpdateToken.new.insert
   end
   cli = Command.new

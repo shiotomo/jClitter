@@ -23,7 +23,7 @@ class UpdateToken
       f.puts "  \"consumer_key\"        : \"" + token["consumer_key"] + "\","
       f.puts "  \"consumer_secret\"     : \"" + token["consumer_secret"] + "\","
       f.puts "  \"access_token\"        : \"" + token["access_token"] + "\","
-      f.puts "  \"access_token_secret\" : \"" + token["access_token_secret"]
+      f.puts "  \"access_token_secret\" : \"" + token["access_token_secret"] + "\""
       f.puts "}"
     end
   end

@@ -37,6 +37,10 @@ class Tweet
       my_profile(client)
     when "prof"
       user_prof(client, order)
+    when "follow"
+      follow(client, order)
+    when "unfollow"
+      unfollow(client, order)
     when nil
       # 何も入力されなかった場合
       # 何もしない
@@ -55,9 +59,8 @@ class Tweet
   private
   def time_line(client)
     client.home_timeline.each do |tweet|
-      puts tweet.user.screen_name
+      puts "--- " + tweet.user.name + " : " + tweet.user.screen_name + " ---"
       puts tweet.text
-      puts ""
     end
   end
 
@@ -93,6 +96,16 @@ class Tweet
     puts "Profile : " + client.user(order[@CONTENT]).description
     print "Tweets : "
     puts client.user(order[@CONTENT]).tweets_count
+  end
+
+  private
+  def follow(client, order)
+    client.follow(order[@CONTENT])
+  end
+
+  private
+  def unfollow(client, order)
+    client.unfollow(order[@CONTENT])
   end
 
   private

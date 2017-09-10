@@ -27,6 +27,6 @@ class Command
 
   # PROMPTの設定
   def prompt
-    print "jClitter >> "
+    print @client.user.screen_name + "@jClitter$ "
   end
 end

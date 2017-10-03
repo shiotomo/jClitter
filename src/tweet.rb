@@ -50,13 +50,13 @@ class Tweet
   end
 
   private
+
   def post(client, order)
     client.update(order[@CONTENT])
     puts "tweet => " + order[@CONTENT]
     puts "Succesful!!"
   end
 
-  private
   def time_line(client)
     client.home_timeline.each do |tweet|
       puts "--- " + tweet.user.name + " : " + tweet.user.screen_name + " ---"
@@ -64,21 +64,18 @@ class Tweet
     end
   end
 
-  private
   def user_time_line(client, order)
     client.user_timeline(order[@CONTENT]).each do |timeline|
       puts client.status(timeline.id).text
     end
   end
 
-  private
   def count_time_line(client, order)
     client.user_timeline(order[@CONTENT], {count: order[@OPTION]}).each do |timeline|
       puts client.status(timeline.id).text
     end
   end
 
-  private
   def my_profile(client)
     puts "--- My profile ---"
     puts "Account ID : " + client.user.screen_name
@@ -88,7 +85,6 @@ class Tweet
     puts client.user.tweets_count
   end
 
-  private
   def user_prof(client, order)
     puts "--- " + client.user(order[@CONTENT]).screen_name + " profile ---"
     puts "Account ID : " + client.user(order[@CONTENT]).screen_name
@@ -98,17 +94,14 @@ class Tweet
     puts client.user(order[@CONTENT]).tweets_count
   end
 
-  private
   def follow(client, order)
     client.follow(order[@CONTENT])
   end
 
-  private
   def unfollow(client, order)
     client.unfollow(order[@CONTENT])
   end
 
-  private
   def debug
     puts "debug"
   end

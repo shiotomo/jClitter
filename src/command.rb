@@ -1,12 +1,12 @@
 require "twitter"
 
 require_relative "token"
-require_relative "tweet"
+require_relative "cmd_list"
 
 class Command
   def initialize
     @client = Token.new.token
-    @tweet = Tweet.new
+    @cmd_list = Cmd_list.new
 
     @CMD = 0
     @CONTENT = 1
@@ -20,7 +20,7 @@ class Command
       if order[@CMD] == "exit" || order[@CMD] == "q"
         exit
       else
-        @tweet.command(@client, order)
+        @cmd_list.command(@client, order)
       end
     end
   end

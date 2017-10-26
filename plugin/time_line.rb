@@ -1,5 +1,3 @@
-require "twitter"
-
 class Time_line < Plugin
   def time_line
     @client.home_timeline.each do |tweet|

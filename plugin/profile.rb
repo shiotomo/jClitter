@@ -1,5 +1,3 @@
-require "twitter"
-
 class Profile < Plugin
   def my_profile
     puts "--- My profile ---"

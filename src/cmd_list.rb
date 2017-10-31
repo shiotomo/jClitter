@@ -6,6 +6,7 @@ require_relative "../plugin/tweet"
 require_relative "../plugin/time_line"
 require_relative "../plugin/profile"
 require_relative "../plugin/follow"
+require_relative "../plugin/template"
 
 class Cmd_list
   def initialize
@@ -36,6 +37,12 @@ class Cmd_list
       Follow.new(client, order).follow
     when "unfollow"
       Follow.new(client, order).unfollow
+    when "kyoto"
+      Template.new(client, order).kyoto
+    when "good"
+      Template.new(client, order).good
+    when "bike"
+      Template.new(client, order).bike
     when "keyedit"
       # 本当に実行していいのか確認
       print "Do you really want to change the key? (y/N)"
@@ -49,7 +56,7 @@ class Cmd_list
       # 何も入力されなかった場合
       # 何もしない
     else
-      puts "jClitter: command not found: " # + order[@CMD]
+      puts "jClitter: command not found: " + order[@CMD]
     end
   end
 end

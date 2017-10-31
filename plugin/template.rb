@@ -1,17 +1,17 @@
 class Template < Plugin
   def kyoto
     @client.update("[テンプレ] 京都に帰りたい")
-    succes
+    success
   end
 
   def good
     @client.update("[テンプレ] 京都は最高")
-    succes
+    success
   end
 
   def bike
     @client.update("[テンプレ] バイクに乗りたい")
-    succes
+    success
   end
 
   def success

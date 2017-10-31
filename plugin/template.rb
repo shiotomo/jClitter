@@ -14,7 +14,7 @@ class Template < Plugin
     succes
   end
 
-  def succes
+  def success
     puts "tweet => " + "テンプレツイート"
     puts "Succesful!!"
   end

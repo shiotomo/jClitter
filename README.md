@@ -1,5 +1,5 @@
 # jClitter
-CLI用Twitterクライアント
+CUI用Twitterクライアント
 
 ## 使用言語
 - Ruby 2.4.1

@@ -7,7 +7,7 @@ require_relative "../plugin/time_line"
 require_relative "../plugin/profile"
 require_relative "../plugin/follow"
 require_relative "../plugin/template"
-require_relative "../plugin/gacha"
+require_relative "../plugin/tamoya"
 
 class Cmd_list
   def initialize
@@ -44,8 +44,8 @@ class Cmd_list
       Template.new(client, order).good
     when "bike"
       Template.new(client, order).bike
-    when "gacha", "g"
-      Gacha.new(client, order).roulette
+    when "tamoya"
+      Tamoya.new(client, order).challenge
     when "keyedit"
       # 本当に実行していいのか確認
       print "Do you really want to change the key? (y/N)"

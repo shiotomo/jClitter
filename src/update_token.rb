@@ -17,6 +17,7 @@ class UpdateToken
   end
 
   def update(token)
+    Dir.mkdir("json") unless File.exist?("json")
     File.open("json/token.json", "w") do |f|
       JSON.dump(token, f)
     end

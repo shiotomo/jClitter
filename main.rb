@@ -1,5 +1,5 @@
 require_relative 'src/command'
-require_relative 'update_token'
+require_relative 'src/update_token'
 
 # mainメソッド
 def main

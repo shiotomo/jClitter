@@ -1,6 +1,6 @@
 require "twitter"
 
-require_relative "../update_token"
+require_relative "update_token"
 require_relative "../plugin/plugin"
 require_relative "../plugin/tweet"
 require_relative "../plugin/time_line"
